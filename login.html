@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <link rel="stylesheet" href="login.css">
+        <title>Login page</title>
+    </head>
+    <body style="font-size: larger; background: linear-gradient(to bottom right, #8e44ad, #c0392b);">
+        <div class="login-form">
+            <form  action="" id="loginForm">
+
+                <div class="inputBox">
+                    <input type="email" id="emailid" placeholder="Email" required>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <div class="inputBox">
+                    <button type="submit" id="upButton">Sign in</button>
+                </div>
+
+                <p>Don't have an account?<a href="registration.html">Sign up</a></p>
+            </form>
+        </div>
+        <div id="error-message" style="display: none;"></div>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.1.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.1.0/firebase-auth.js"></script>
+        <script src="./login.js"></script>
+
+    </body>
+</html> 

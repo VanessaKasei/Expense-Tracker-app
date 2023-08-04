@@ -3,35 +3,48 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport"content="width=device-width, initial-scale">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="registration.css">
         <title>Registration page | Firebase </title>
+        
     </head>
     <body style="font-size: larger; background: linear-gradient(to bottom right, #8e44ad, #c0392b);">
     <div class="my-form">
         <form action="" id="regForm">
-            <div class="alert"> Registration Successful!!</div>
-            <div class="inputBox">
-                <input type="text" id="name" placeholder="Your name">
+            <!-- HTML -->
+            <div id="success-message" style="display: none;">
+                Registration successful! You will be redirected shortly...
+            </div>
+            
+            <div id="error-message" style="display: none; color: red;">
+                Error: <span id="error-details"></span>
             </div>
 
             <div class="inputBox">
-                <input type="text" id="userName" placeholder="Username">
+                <input type="text" id="name" placeholder="Name" required>
             </div>
 
             <div class="inputBox">
-                <input type="email" id="emailid" placeholder="Your email">
+                <input type="text" id="userName" placeholder="Username" required>
             </div>
 
             <div class="inputBox">
-                <button type="submit" id="inButton">Sign Up</button>
+                <input type="email" id="emailid" placeholder="Email" required>
             </div>
-            <br>
-          <p>Already have an account?<a href="login.html">Sign in</a></p>  
+            
+            <div class="inputBox">
+                    <input type="password" id="password" placeholder="Password" required>
+             </div>
+
+            <div class="inputBox">
+                <button type="button" id="upButton">Sign Up</button>
+            </div>
         </form>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="registration.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script type="module" src="registration.js"></script>
+
     </body>
 </html>
